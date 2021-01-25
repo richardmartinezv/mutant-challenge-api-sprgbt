@@ -1,0 +1,65 @@
+{
+	"info": {
+		"_postman_id": "52d181b7-814b-4e9a-b71e-3fbd3b279d45",
+		"name": "TestCollection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://35.224.165.63/v1/mutant",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"let chars = [\"A\", \"T\", \"G\", \"C\"];\r",
+							"let result = Array();\r",
+							"let matrixN = 6;\r",
+							"let element = \"\";\r",
+							"for (let i = 0; i < matrixN; i++) {\r",
+							"    element = \"\";\r",
+							"    for (let j = 0; j < matrixN; j++) {\r",
+							"        random = Math.floor(Math.random()*3);\r",
+							"        element += chars[random];\r",
+							"    }\r",
+							"    \r",
+							"    result.push(element);\r",
+							"}\r",
+							"pm.environment.set(\"seqeuence-dna\", JSON.stringify(result));\r",
+							"console.log(result);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"dna\": {{seqeuence-dna}} }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://35.224.165.63/v1/mutant",
+					"protocol": "http",
+					"host": [
+						"35",
+						"224",
+						"165",
+						"63"
+					],
+					"path": [
+						"v1",
+						"mutant"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
