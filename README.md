@@ -127,8 +127,8 @@ Execute the following instructions:
 #### CLONE AND INSTALLATION
 ```
 # Clone SpringBoot Project
-git clone --branch master https://gitlab.com/richardmartinezvalderrama/quasar-operation-challenge-api-sprgbt.git
-cd quasar-operation-challenge-api-sprgbt
+git clone --branch release https://github.com/richardmartinezv/mutant-challenge-api-sprgbt.git
+cd mutant-challenge-api-sprgbt
 
 mvn clean install -P pro
 
@@ -166,7 +166,7 @@ Create the environment in postman for the execution of the tests:
 
 ```bash 
 # clone project 
-git clone {URL_REPOSITORY_GITLAB}
+git clone --branch release https://github.com/richardmartinezv/mutant-challenge-api-sprgbt.git
 cd mutant-challenge-api-sprgbt
 
 # execute prepare-enviroment script
