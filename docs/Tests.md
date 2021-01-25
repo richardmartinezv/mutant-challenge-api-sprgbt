@@ -42,7 +42,7 @@ Using the POSTMAN tool we will proceed to build our load TEST step by step:
 
 We build on POSTMAN the request to the EndPoint "/ mutant" and we launch a test to see the result of the response, as shown below:
 
-![alt text](docs/img/Img-7._Mutant_Request_Test.png "Img-7.Mutant Request Test")
+![Alt Text](/docs/img/Img-7._Mutant_Request_Test.png)
 
 In the previous image we can see a correct response from our service, indicating that indeed the DNA sequence sent in our request body corresponds to a mutant, since its response corresponded to a 200 code.
 
@@ -51,7 +51,7 @@ In the previous image we can see a correct response from our service, indicating
 
 Below I attach the image associated with the script that I create in Node.js so that it generates different DNA sequences in the body of the request for each request I make from POSTMAN.
 
-![alt text](docs/img/Img-8._Script_generator_of_difference_sequences.png "Img-8. Generator script of different DNA sequences by request")
+![Alt Text](/docs/img/Img-8._Script_generator_of_difference_sequences.png)
 
 
 ### Step 3
@@ -62,7 +62,7 @@ Below I attach the image related to the Run Test Collection created in POSTMAN.
 
 
 
-![alt text](docs/img/Img-10.Run_test_Collection_End.png "Img-10. Run Test Collection")
+![Alt Text](/docs/img/Img-10.Run_test_Collection_End.png)
 
 
 ## CONCLUSIONS
@@ -72,9 +72,9 @@ From the result of the load test carried out through the Run Test Collection, we
 In addition, we must also take into account that our API is deployed in the GCP environment under a container environment with Docker managed and administered by Kubernetes, which provides us with an ease when we want to scale our API in order to provide and guarantee a better service , and that at the moment we have only 2 instances or replicas deployed, which could be increased through Kubernetes in order to give our component a better performance and therefore being able to respond in that way to many more requests per second and analyze in turn DNA sequences of larger sizes.
 
 
-Then you will find attached in the following Link the report obtained from the [Run test Collection granted by POSTMAN](docs/TestCollection.postman_test_run.json)
+Then you will find attached in the following Link the report obtained from the [Run test Collection granted by POSTMAN](/docs/TestCollection.postman_test_run.json)
 
 
-Also attached you can also find the [collection created in POSTMAN for testing](docs/TestCollection.postman_collection.json)
+Also attached you can also find the [collection created in POSTMAN for testing](/docs/TestCollection.postman_collection.json)
 
 Note that if you want to import the collection into postman for testing, please be sure to check that the IP corresponds to the one indicated on the main page associated with this documentation.
