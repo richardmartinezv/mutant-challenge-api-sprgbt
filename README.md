@@ -68,14 +68,14 @@ Below you can see information related to some load tests performed on the compon
 
 EndPoints associated with the functionality
 
-- [POST:/mutant](http://34.66.93.194/mutant)
+- [POST:/mutant](http://34.66.93.194/v1//mutant)
 
 ```
 curl -H "Content-Type: application/json" -X POST -w "\n%{http_code}\n" -d '{"dna": ["ATGCGA","CAGTGC","TTATGT","AGAAGG","CCCCTA","TCACTG"]}' http://34.66.93.194/v1/mutant
 200 OK
 ```
 
-- [GET:/stats](http://34.66.93.194/stats)
+- [GET:/stats](http://34.66.93.194/v1/stats)
 
 ```
 curl --location --request GET http://34.66.93.194/v1/stats
@@ -88,7 +88,7 @@ curl --location --request GET http://34.66.93.194/v1/stats
 
 HealthCheck is an extra EndPoint associated with the REST service used to show the active status of the component.
 
-- [GET://healthCheck](http://34.66.93.194/healthCheck)
+- [GET:/healthCheck](http://34.66.93.194/healtcheck)
 
 ```
 curl --location --request GET 'http://34.66.93.194/healtcheck'
