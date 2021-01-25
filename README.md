@@ -68,17 +68,17 @@ Below you can see information related to some load tests performed on the compon
 
 EndPoints associated with the functionality
 
-- [POST:/mutant](http://{url_ip}/mutant)
+- [POST:/mutant](http://34.66.93.194/mutant)
 
 ```
-curl -H "Content-Type: application/json" -X POST -w "\n%{http_code}\n" -d '{"dna": ["ATGCGA","CAGTGC","TTATGT","AGAAGG","CCCCTA","TCACTG"]}' http://{url_ip}/v1/mutant
+curl -H "Content-Type: application/json" -X POST -w "\n%{http_code}\n" -d '{"dna": ["ATGCGA","CAGTGC","TTATGT","AGAAGG","CCCCTA","TCACTG"]}' http://34.66.93.194/v1/mutant
 200 OK
 ```
 
-- [GET:/stats](http://{url_ip}/stats)
+- [GET:/stats](http://34.66.93.194/stats)
 
 ```
-curl --location --request GET http://{url_ip}/v1/stats
+curl --location --request GET http://34.66.93.194/v1/stats
 
 {"countMutantDna":1,"countHumanDna":1,"ratio":1.0}
 
@@ -88,10 +88,10 @@ curl --location --request GET http://{url_ip}/v1/stats
 
 HealthCheck is an extra EndPoint associated with the REST service used to show the active status of the component.
 
-- [GET://healthCheck](http://{url_ip}/healthCheck)
+- [GET://healthCheck](http://34.66.93.194/healthCheck)
 
 ```
-curl --location --request GET 'http://{url_ip}/healtcheck'
+curl --location --request GET 'http://34.66.93.194/healtcheck'
 
 HealthCheck
 200 OK
@@ -127,8 +127,8 @@ Execute the following instructions:
 #### CLONE AND INSTALLATION
 ```
 # Clone SpringBoot Project
-git clone --branch master https://gitlab.com/richardmartinezvalderrama/quasar-operation-challenge-api-sprgbt.git
-cd quasar-operation-challenge-api-sprgbt
+git clone --branch release https://github.com/richardmartinezv/mutant-challenge-api-sprgbt.git
+cd mutant-challenge-api-sprgbt
 
 mvn clean install -P pro
 
@@ -159,14 +159,14 @@ Create the environment in postman for the execution of the tests:
 | Env   | variable | value                 |
 |-------|----------|-----------------------|
 | local | host     | http://localhost:8080 |
-| pro   | host     | http://{URL_IP}       |
+| pro   | host     | http://34.66.93.194   |
 
 
 ## DEPLOYMENT 📦
 
 ```bash 
 # clone project 
-git clone {URL_REPOSITORY_GITLAB}
+git clone --branch release https://github.com/richardmartinezv/mutant-challenge-api-sprgbt.git
 cd mutant-challenge-api-sprgbt
 
 # execute prepare-enviroment script

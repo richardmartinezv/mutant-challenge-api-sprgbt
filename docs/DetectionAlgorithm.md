@@ -5,9 +5,7 @@ As mentioned above, the objective of this API was related to carrying out the pr
 
 Below you can see, as a graph, the considerations to detect if a DNA sequence corresponds to that of a mutant or that of a human mentioned above:
 
-![alt text](docs/img/Img-1._Representation_of_the_DNA_sequence_table.png "Img-1. Representation of the DNA sequence table")
-
-
+![Alt Text](/docs/img/Img-1._Representation_of_the_DNA_sequence_table.png)
 
 
 ### STEP 1
@@ -16,7 +14,7 @@ Initially, and having very clear the considerations that must be taken into acco
 
 In addition, previously validation is also carried out in relation to the fact that the DNA sequence only contains the letters allowed by business rule (A, T, C, G).
 
-![alt text](docs/img/Img-5._NxN_table.png "Img-3.NxN table representation")
+![Alt Text](/docs/img/Img-5._NxN_table.png)
 
 
 
@@ -38,7 +36,7 @@ The 3 advanced movements established to go through the table of DNA sequences we
 
 In this way we would be ensuring that with each possible forward movement on the table of DNA sequences in the possible ways (horizontal, vertical and diagonal) to find the different sequences of 4 letters in a row, they would be fully taken into account, without generating reprocessing. rechecking from each position at the point (X, Y) or (Row, Column) the positions for which when we made the forward movement we previously checked.
 
-![alt text](docs/img/Img-4._Advanced_movement_representation.png "Img-4. Advanced movement representation")
+![Alt Text](/docs/img/Img-4._Advanced_movement_representation.png)
 
 
 
@@ -59,4 +57,4 @@ And in this way I continue moving in a particular direction, until I reach the p
 With this I assume that I have found a DNA sequence, now I advance to the next position in the table and iterate again in the same way that I mentioned before, until I find another sequence of 4 letters in a row and the same. Using a valid counter, the number of sequences I have found, until I comply with the business rule that tells me that if I find more than one sequence of the same letters, in whatever form (horizontal, vertical, diagonal) I can consider that the DNA sequence corresponds to that of a mutant, therefore I stop the process of my detection algorithm and return the answer, otherwise it is a human and could not be recruited by Magneto.
 
 
-![alt text](docs/img/Img-3._NxN_table_representation.png "Img-3.NxN table representation")
+![Alt Text](/docs/img/Img-3._NxN_table_representation.png "Img-3.NxN table representation")
