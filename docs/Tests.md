@@ -16,7 +16,7 @@ This EndPoint is in charge of receiving all requests from users in order to dete
 Example:  
 
 ```
-curl -H "Content-Type: application/json" -X POST -w "\n%{http_code}\n" -d '{"dna": ["ATGCGA","CAGTGC","TTATGT","AGAAGG","CCCCTA","TCACTG"]}' http://{url_ip}/v1/mutant
+curl -H "Content-Type: application/json" -X POST -w "\n%{http_code}\n" -d '{"dna": ["ATGCGA","CAGTGC","TTATGT","AGAAGG","CCCCTA","TCACTG"]}' http://34.66.93.194/v1/mutant
 200 OK
 ```
 
@@ -29,7 +29,7 @@ This EndPoint is responsible for obtaining the statistics related to the ratio b
 Example:
     
 ```
-curl --location --request GET http://{url_ip}/v1/stats
+curl --location --request GET http://34.66.93.194/v1/stats
 
 {"countMutantDna":1,"countHumanDna":1,"ratio":1.0}
 
